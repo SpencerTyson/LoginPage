@@ -21,7 +21,7 @@ const LoginPage = () => {
                 
                <LeftSide>
                         <Img src='images123.jpeg'/>
-                        <Text fontWeight='600'>
+                        <Text fontWeight='600' Color='white'>
                             Not a member yet ? 
                              <Line>
                               Sign up and enjoy our services 
@@ -44,9 +44,11 @@ const LoginPage = () => {
         
                <RightSide>
                         <Cancel>
-
-                         <Cross/>  
+                             <Cross/>  
                         </Cancel>
+                        <Text fontWeight='1000' fontSize='2' Width='39' Height='15' justifyContent='flex-end'>
+                                    Log In 
+                        </Text>
                </RightSide>
             </Wrapper>
          </Col> 
@@ -100,21 +102,26 @@ const Line = styled.div`
 `
 
 const Text = styled.div`
- color:white;
- position:absolute;
- font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : '400')};
-	font-size: ${({ fontSize}) => (fontSize ? `${fontSize}rem` : '400')};
-	line-height: ${({ lineheight}) => (lineheight ? `${lineheight}rem` : '1.5')};	
-	letter-spacing: 0.02em;   
+ 
+    color: ${({Color}) => (Color ? Color : 'black')};
+    position:absolute;
+    font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : '400')};
+	 font-size: ${({ fontSize}) => (fontSize ? `${fontSize}rem` : '400')};
+	 line-height: ${({ lineheight}) => (lineheight ? `${lineheight}rem` : '1.5')};	
+	 letter-spacing: 0.02em;   
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:${({justifyContent}) =>(justifyContent ? `${justifyContent}` : `justifyContent`)};
+    width:${({Width})=>(Width ? `${Width}%` : 'auto' )};
+    height:${({Height})=>(Height ? `${Height}%` : 'auto' )};
+    border: ${({ Border }) => (Border ? `${Border}` : '1px solid red')};
 `
 
 const PageImg = styled.img`
 position:absolute;
 width:100%;
-height:100%
+height:100%;
 `
 const Img = styled.img`
 width:38.95%;
