@@ -7,7 +7,7 @@ import { CiTwitter } from "react-icons/ci";
 import { Spacer } from '../shared'
 import { FaInstagram } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
-
+import { LiaSkullCrossbonesSolid } from "react-icons/lia";
 
 const LoginPage = () => {
   return (
@@ -24,7 +24,7 @@ const LoginPage = () => {
                         <Text fontWeight='600'>
                             Not a member yet ? 
                              <Line>
-                              Sign up and enjoye our services 
+                              Sign up and enjoy our services 
                              </Line>  
                            <Spacer height={1.5}/>
                             <Button>
@@ -43,8 +43,11 @@ const LoginPage = () => {
                 </LeftSide>
         
                <RightSide>
-                          Ammar
-            </RightSide>
+                        <Cancel>
+
+                         <Cross/>  
+                        </Cancel>
+               </RightSide>
             </Wrapper>
          </Col> 
       </Row>
@@ -53,6 +56,22 @@ const LoginPage = () => {
     </>
   )
 }
+
+
+const Cancel = styled.div`
+width:100%;
+height:15%;
+border:1px solid red;
+display:flex;
+flex-direction:row-reverse;
+align-items:center;
+`
+
+const Cross = styled(LiaSkullCrossbonesSolid)`
+font-size:2.5rem;
+margin-right:1rem;
+`
+
 
 const Twitter = styled(CiTwitter)`
    font-size:2.5rem;
