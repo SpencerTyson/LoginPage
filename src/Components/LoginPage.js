@@ -8,6 +8,8 @@ import { Spacer } from '../shared'
 import { FaInstagram } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
 import { LiaSkullCrossbonesSolid } from "react-icons/lia";
+import Form from './Form';
+
 
 const LoginPage = () => {
   return (
@@ -49,6 +51,8 @@ const LoginPage = () => {
                         <Text fontWeight='1000' fontSize='2' Width='39' Height='15' justifyContent='flex-end'>
                                     Log In 
                         </Text>
+                        <Spacer height={5.5} />
+                        <Form/>
                </RightSide>
             </Wrapper>
          </Col> 
@@ -63,7 +67,7 @@ const LoginPage = () => {
 const Cancel = styled.div`
 width:100%;
 height:15%;
-border:1px solid red;
+
 display:flex;
 flex-direction:row-reverse;
 align-items:center;
@@ -115,7 +119,7 @@ const Text = styled.div`
     justify-content:${({justifyContent}) =>(justifyContent ? `${justifyContent}` : `justifyContent`)};
     width:${({Width})=>(Width ? `${Width}%` : 'auto' )};
     height:${({Height})=>(Height ? `${Height}%` : 'auto' )};
-    border: ${({ Border }) => (Border ? `${Border}` : '1px solid red')};
+    border: ${({ Border }) => (Border ? `${Border}` : '')};
 `
 
 const PageImg = styled.img`
