@@ -2,6 +2,12 @@
 import React from 'react'
 import { Col, Container, Row } from 'styled-bootstrap-grid'
 import styled from 'styled-components'
+import { MdArrowForward } from "react-icons/md";
+import { CiTwitter } from "react-icons/ci";
+import { Spacer } from '../shared'
+import { FaInstagram } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
+
 
 const LoginPage = () => {
   return (
@@ -20,8 +26,20 @@ const LoginPage = () => {
                              <Line>
                               Sign up and enjoye our services 
                              </Line>  
-                            
+                           <Spacer height={1.5}/>
+                            <Button>
+                                       Sign Up  <MdArrowForward/>
+                            </Button>
+                            <Spacer height={4} />
+                            <Icons>
+                                     <Twitter/>
+                                     <Instagram/>
+                                     <Facebook/>
+                                     
+                            </Icons>
+                            <Spacer height={2}/>
                         </Text>
+                      
                 </LeftSide>
         
                <RightSide>
@@ -37,8 +55,28 @@ const LoginPage = () => {
     </>
   )
 }
+const Twitter = styled(CiTwitter)`
+   font-size:2.5rem;
+`
+const Instagram = styled(FaInstagram)`
+   font-size:2rem;
+`
 
-  
+const Facebook = styled(BsFacebook)`
+   font-size:2rem;
+`
+ const Icons = styled.div`
+    
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+ `
+
+const Button = styled.div`
+text-decoration:underline;
+${"" /* line-height:1rem; */}
+`  
 
 const Line = styled.div`
 
@@ -51,7 +89,7 @@ const Text = styled.div`
 	font-size: ${({ fontSize}) => (fontSize ? `${fontSize}rem` : '400')};
 	line-height: ${({ lineheight}) => (lineheight ? `${lineheight}rem` : '1.5')};	
 	letter-spacing: 0.02em;
-    border:1px solid red;
+    
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -83,7 +121,7 @@ align-items:center;
 const LeftSide = styled.div`
    width:40%;
    height:80vh;
-   border:1px solid red;
+   
    background-color:white;
    display:flex;
    justify-content:flex-end;
@@ -93,7 +131,7 @@ const LeftSide = styled.div`
 const RightSide = styled.div`
    width:40%;
    height:80vh;
-   border:1px solid red;
+   
    background-color:white;
 `
 export default LoginPage
