@@ -46,9 +46,7 @@ const LoginPage = () => {
                           Ammar
             </RightSide>
             </Wrapper>
-         </Col>
-         
-       
+         </Col> 
       </Row>
        </Container>
        </Page>
@@ -124,12 +122,13 @@ const LeftSide = styled.div`
    display:flex;
    justify-content:flex-end;
   flex-direction:column;
-  align-items:center
+  align-items:center;
+  box-shadow: 5px 4px 50px 10px #000000;
 `
 const RightSide = styled.div`
    width:40%;
    height:80vh;
-   
+   box-shadow: 5px 4px 50px 10px #000000;
    background-color:white;
 `
 export default LoginPage
