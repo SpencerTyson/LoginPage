@@ -55,6 +55,7 @@ const LoginPage = () => {
     </>
   )
 }
+
 const Twitter = styled(CiTwitter)`
    font-size:2.5rem;
 `
@@ -66,7 +67,6 @@ const Facebook = styled(BsFacebook)`
    font-size:2rem;
 `
  const Icons = styled.div`
-    
     width:100%;
     display:flex;
     justify-content:space-between;
@@ -88,8 +88,7 @@ const Text = styled.div`
  font-weight: ${({fontWeight}) => (fontWeight ? fontWeight : '400')};
 	font-size: ${({ fontSize}) => (fontSize ? `${fontSize}rem` : '400')};
 	line-height: ${({ lineheight}) => (lineheight ? `${lineheight}rem` : '1.5')};	
-	letter-spacing: 0.02em;
-    
+	letter-spacing: 0.02em;   
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -102,7 +101,7 @@ height:100%
 `
 const Img = styled.img`
 width:38.95%;
-height:79.55%;
+height:79.95%;
 position:absolute;
 `
 
@@ -120,8 +119,7 @@ align-items:center;
 `
 const LeftSide = styled.div`
    width:40%;
-   height:80vh;
-   
+   height:80vh; 
    background-color:white;
    display:flex;
    justify-content:flex-end;
